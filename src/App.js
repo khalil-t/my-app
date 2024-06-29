@@ -1,13 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
+import {Navbar ,Feed,VideoDetail,ChannelDetail,SearchFeed} from "./components"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-    lll
-      </header>
-    </div>
+ <Router>
+  <div>
+<Navbar/>
+<Routes>
+
+        <Route path='/video/:id' element={<VideoDetail />} />
+        <Route path='/channel/:id' element={<ChannelDetail />} />
+        <Route path='/search/:searchTerm' element={<SearchFeed />} />
+        <Route exact path='/' element={<Feed />} />
+
+</Routes>
+
+</div>
+ </Router>
   );
 }
 //instalation ta3 roboto 

@@ -1,0 +1,14 @@
+.Stack .Box{
+
+
+    margin: 0px;
+}
+.Stack .typo{
+
+width: 34%;
+    background-color: aqua;
+    color: white;
+}
+.one{
+display: flex;
+flex-direction: row;}
