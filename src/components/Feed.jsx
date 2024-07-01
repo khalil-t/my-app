@@ -10,7 +10,7 @@ const Feed = () => {
   const [videos, setVideos] = useState(null);
   useEffect(() => {
   setVideos(null)
-
+console.log(videos)
   const fetchVideos = async () => {
     try {
       const data = await fetchdata(`search?part=snippet&q=${selectedCategory}`);
@@ -38,17 +38,10 @@ const Feed = () => {
       <Box >
         <Sidebar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
         
-        <Typography >
-          Copyright © 2022 JSM Media
-        </Typography>
+    
       </Box>
 
-      <Box >
-        <Typography >
-      
-        </Typography>
 
-      </Box>
       <Videos videos ={videos}/>
 
 
